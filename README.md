@@ -14,7 +14,7 @@
 | News Aggregator                 |                                       | ❌     |
 | Recipe Sharing Website          |                                       | ❌     |
 | Task Management App             |                                       | ❌     |
-| URL Shortener                   |                                       | ❌     |
+| URL Shortener                   |                                       | ✔     |
 | Online Code Editor              |                                       | ❌     |
 | Event Management System         |                                       | ❌     |
 | Crowdfunding Platform           |                                       | ❌     |
