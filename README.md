@@ -3,7 +3,7 @@
 | Project Name                   | Tech Stack                             | Status |
 | ------------------------------ | ---------------------------------------| ------ |
 | Personal Portfolio Website     |                                        | ❌     |
-| Blogging Platform              |                                        | ❌     |
+| Blogging Platform              |                                        | 🟡     |
 | E-commerce Website             |                                        | ❌     |
 | Social Media Platform           |                                       | ❌     |
 | Content Management System (CMS) |                                       | ❌     |
