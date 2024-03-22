@@ -10,9 +10,14 @@ export default function Home() {
         return res != null
     }
 
-    const onSubmit = () => {
+    const onSubmit = async () => {
         if (!isUrlValid(url)) return setError(true)
         else setError(false)
+
+        const result = await fetch('/api/url', {
+            method: "POST",
+            body: JSON.stringify({ url })
+        })
 
         
     }

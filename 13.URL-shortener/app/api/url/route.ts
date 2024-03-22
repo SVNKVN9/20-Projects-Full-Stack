@@ -9,5 +9,6 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
     const json = await req.json()
+
     return Response.json({ message: `Hello, ${json.message}` })
 }
