@@ -1,9 +1,10 @@
 'use client'
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
     const [url, setUrl] = useState<string>("")
     const [error, setError] = useState<boolean>(false)
+    const [message, setMessage] = useState<string>("")
 
     const isUrlValid = (userInput: string) => {
         const res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
@@ -19,7 +20,9 @@ export default function Home() {
             body: JSON.stringify({ url })
         })
 
-        
+        const json = await result.json()
+
+        setMessage(json.message)
     }
 
     return (
@@ -36,6 +39,11 @@ export default function Home() {
                     />
                     <button className="bg-blue-600 px-3 py-2 rounded-lg ml-3" onClick={onSubmit}>Shorten URL</button>
                 </div>
+                {
+                    message ? <p className="w-1/2 bg-blue-600 text-center py-3 rounded-2xl">
+                        {message}
+                    </p> : <></>
+                }
                 {
                     error ? <p className="w-1/2 bg-red-600 text-center py-3 rounded-2xl">
                         The url format not correct
